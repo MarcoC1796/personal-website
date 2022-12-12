@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Navigation from "./routes/navigation/navigation.component";
+import AboutMe from "./routes/about-me/about-me.component";
 
 import "./App.css";
 
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <div>About me</div>,
+        element: <AboutMe />,
       },
       {
         path: "software-projects",
@@ -31,9 +32,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <div className="font-mono">
       <RouterProvider router={router} />
-    </>
+    </div>
   );
 }
 
